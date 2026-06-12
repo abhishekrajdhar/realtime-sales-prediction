@@ -1,6 +1,6 @@
 # MLflow Configuration - Local Mode
 mlflow:
-  tracking_uri: "file:///tmp/mlruns"
+  tracking_uri: "sqlite:////tmp/mlflow.db"
   experiment_name: "sales_forecasting"
   registry_name: "sales_forecast_models"
   

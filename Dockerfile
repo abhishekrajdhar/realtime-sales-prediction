@@ -9,10 +9,14 @@ RUN apt-get update && apt-get install -y \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
+# Ensure repo include/ (configs, utilities and sample data) are available inside container
+COPY include /usr/local/airflow/include
+RUN chown -R astro:astro /usr/local/airflow/include || true
+
 USER astro
 
 # Set environment variables for MLflow and MinIO
-ENV MLFLOW_TRACKING_URI=http://minio:9000
+ENV MLFLOW_TRACKING_URI=http://mlflow:5001
 ENV MLFLOW_S3_ENDPOINT_URL=http://minio:9000
 ENV AWS_ACCESS_KEY_ID=minioadmin
 ENV AWS_SECRET_ACCESS_KEY=minioadmin
