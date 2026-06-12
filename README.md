@@ -155,3 +155,5 @@ docker-compose -f docker-compose.override.yml logs streamlit
 4. Add tests if applicable
 5. Submit a pull request
 
+![Screenshot](screenshot.png)
+
