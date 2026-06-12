@@ -1,5 +1,8 @@
 # Realtime Sales Forecasting MLOps Platform
 
+![Screenshot](screenshot.png)
+
+
 ## Overview
 
 A production-ready MLOps platform for sales forecasting that demonstrates modern machine learning engineering practices. Built on Astronomer (Apache Airflow), this project implements an end-to-end ML pipeline with ensemble modeling, comprehensive visualization, and real-time inference capabilities via Streamlit.
@@ -155,5 +158,4 @@ docker-compose -f docker-compose.override.yml logs streamlit
 4. Add tests if applicable
 5. Submit a pull request
 
-![Screenshot](screenshot.png)
 
